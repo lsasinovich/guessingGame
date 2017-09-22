@@ -8,6 +8,9 @@ class GuessingGame {
     	if (min === undefined || max===undefined){
     		throw new Error ("Invalid input");
     	}
+    	if (min > max){
+    		throw new Error ("Min must be less than max");
+    	}
         this.min = min;
         this.max = max;
     }
