@@ -5,12 +5,15 @@ class GuessingGame {
     }
 
     setRange (min, max) {
+    	if (min === undefined || max===undefined){
+    		throw new Error ("Invalid input");
+    	}
         this.min = min;
         this.max = max;
     }
 
     guess() {
-        return  Math.round((this.max-this.min)/2) + this.min;;
+        return  Math.round((this.max-this.min)/2) + this.min;
     }
 
     lower() {
